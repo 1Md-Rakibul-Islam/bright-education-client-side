@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <>
         {['xxl'].map((expand) => (
-          <Navbar key={expand} bg="light" expand={expand} className="mb-3">
+          <Navbar key={expand} bg="light" expand={expand} className="mb-3 fixed-top">
             <Container fluid className='mx-3' >
               <Link className='text-decoration-none' to={'/'}>
                 <Navbar.Brand className='company-logo d-md-block d-none'>

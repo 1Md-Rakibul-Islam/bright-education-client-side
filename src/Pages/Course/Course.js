@@ -8,11 +8,11 @@ const Course = ({course}) => {
 
     return (
         <Col>
-          <Card>
+          <Card className='course-card'>
             <Card.Img className='course-img' variant="top" src={picture} />
           <Card.Body>
             <Card.Title>{title}</Card.Title>
-            <p>{instructor}</p>
+            <p>Instructor: {instructor}</p>
           </Card.Body>
           <Card.Footer className='d-flex justify-content-between'>
             <small className="text-muted">Price: {price}</small>

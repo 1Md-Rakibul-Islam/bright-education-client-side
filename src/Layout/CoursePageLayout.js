@@ -11,18 +11,17 @@ const CoursePageLayout = () => {
     const courses = useLoaderData();
     return (
         <div>
-            <Container fluied className=''>
-                <Row>
-                    <Col lg='3' className='d-none d-lg-block'>
+            <Container  className=''>
+                <Row className=''>
+                    <Col lg='3' className='mt-5 d-none d-lg-block'>
                         <LeftSideNav course={courses}></LeftSideNav>
                     </Col>
                     <Col  lg='9'>
-                    <Row xs={1} sm={1} md={2} lg={3} xl={3} className="g-4">
-                        {
-                            courses.map( course => <Course key={course._id} course={course}></Course>)
-                        }                      
-                    </ Row>
-
+                        <Row xs={1} sm={1} md={2} lg={3} xl={3} className="g-4">
+                            {
+                                courses.map( course => <Course key={course._id} course={course}></Course>)
+                            }                      
+                        </ Row>
                     </Col>
                 </Row>
             </Container>

@@ -1,0 +1,10 @@
+/* .course-img img {
+    max-width: 300px;
+    max-height: 280px;
+} */
+
+.course-img {
+    max-width: 300px;
+    max-height: 280px;
+    border: 1px;    
+}

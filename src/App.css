@@ -1,0 +1,21 @@
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+
+.usersContainer {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 5px; */
+  /* display: flex; */
+  /* justify-content: space-evenly; */
+
+}
+
+.user{
+  width: 300px;
+  border: 3px solid salmon;
+  margin: 10px;
+}

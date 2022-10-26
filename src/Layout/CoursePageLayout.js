@@ -1,22 +1,24 @@
 import React from 'react';
-import { Outlet } from "react-router-dom";
-import Header from '../Pages/Shared/Header/Header';
+import { Outlet, useLoaderData } from "react-router-dom";
 import { Row, Col, Container } from 'react-bootstrap';
 import LeftSideNav from '../Pages/Shared/LeftSideNav/LeftSideNav';
-import Footer from '../Pages/Shared/Footer/Footer';
-import Categories from '../Pages/Categories/Categories';
 import Course from '../Pages/Course/Course';
 
+
+
 const CoursePageLayout = () => {
+    const courses = useLoaderData();
     return (
         <div>
             <Container fluied className=''>
                 <Row>
                     <Col lg='4' className='d-none d-lg-block'>
-                        <LeftSideNav></LeftSideNav>
+                        <LeftSideNav course={courses}></LeftSideNav>
                     </Col>
                     <Col lg='8'>
-                        <Course></Course>
+                        {
+                            courses.map( course => <Course key={course._id} course={course}></Course>)
+                        }
                     </Col>
                 </Row>
             </Container>

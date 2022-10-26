@@ -1,21 +1,11 @@
 import React from 'react';
-import Header from '../Shared/Header/Header';
-import CourseContent from '../CourseContent/CourseContent';
-import LeftSideNav from '../Shared/LeftSideNav/LeftSideNav';
-import { Row, Col, Container } from 'react-bootstrap';
-// import Footer from '../Pages/Shared/Footer/Footer';
 
-const Course = () => {
+const Course = ({course}) => {
+    const courseCard = course
+    console.log(courseCard);
     return (
         <div>
-            <Container fluied className=''>
-                <Row>
-                    <Col lg='8'>
-                        <CourseContent></CourseContent>
-                    </Col>
-                </Row>
-            </Container>
-            {/* <Footer></Footer> */}
+            <h2>Course</h2>
         </div>
     );
 };

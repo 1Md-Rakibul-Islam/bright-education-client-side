@@ -1,13 +1,14 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
-import Categories from '../../Categories/Categories';
+import { useLoaderData, Link } from 'react-router-dom';
 
-const LeftSideNav = () => {
-    const category = useLoaderData()
+const LeftSideNav = ({course}) => {
+    console.log(course);
     return (
         <div>
-            <h2>Lesft side nav</h2>
-            <Categories></Categories>
+            <h4>Course: {course.length}</h4>
+            {
+                course.map( cs => <Link to={`/course/${cs._id}`}><li>{cs.title}</li></Link>)
+            }
         </div>
     );
 };

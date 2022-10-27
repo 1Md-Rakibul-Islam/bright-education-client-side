@@ -5,6 +5,7 @@ import CourseDetails from "../Pages/CourseDetails/CourseDetails";
 import FAQ from "../Pages/FAQ/FAQ";
 import Blogs from "../Pages/Blogs/Blogs";
 import Login from "../Pages/Login/Login";
+import Checkout from "../Pages/Checkout/Checkout";
 import Register from "../Pages/Register/Register";
 import CoursePageLayout from "../Layout/CoursePageLayout";
 import DataNotFound from "../Pages/Shared/DataNotFound/DataNotFound";
@@ -33,6 +34,11 @@ export const routes = createBrowserRouter([
         {
           path: '/course/:id',
           element: <CourseDetails></CourseDetails>,
+          loader: ({params}) => fetch(`https://bright-education.vercel.app/course/${params.id}`)
+        },
+        {
+          path: '/course/:id/checkout',
+          element: <Checkout></Checkout>,
           loader: ({params}) => fetch(`https://bright-education.vercel.app/course/${params.id}`)
         }
         ,

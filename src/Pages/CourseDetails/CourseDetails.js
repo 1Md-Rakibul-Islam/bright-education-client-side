@@ -1,15 +1,13 @@
 import React from 'react';
 import { Row, Col, Container } from 'react-bootstrap';
-import { Image } from 'react-bootstrap/Image';
 import { Link, useLoaderData } from 'react-router-dom';
-import LeftSideNav from '../Shared/LeftSideNav/LeftSideNav';
-
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
+
 const CourseDetails = () => {
-    const {about, category_name, enrolled, instructor, picture, price, title, upload} = useLoaderData();
+    const {about, _id, category_name, enrolled, instructor, picture, price, title, upload} = useLoaderData();
 
     return (
         <Container className='mt-5'>
@@ -36,14 +34,14 @@ const CourseDetails = () => {
                         <Card.Text>
                         <p class="card-text"><span class="text-primary">Price: </span> {price}</p>
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
+                        <Link to={`/course/${_id}/checkout`}><Button variant="primary" >Checkout</Button></Link>
                     </Card.Body>
                 </Col>
             </Row>
             <Card.Footer>
                 <div className='d-flex justify-content-between'>
                     <p class="card-text"><small class="text-muted">Upload: {upload}</small></p>
-                    <Button variant="primary">Go To Another Course</Button>
+                    <Link to={'/course'}><Button variant="primary">Go To Another Course</Button></Link>
                 </div>
             </Card.Footer>
             </Card>

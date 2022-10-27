@@ -6,11 +6,11 @@ import ListGroup from 'react-bootstrap/ListGroup';
 const LeftSideNav = ({course}) => {
     console.log(course);
     return (
-        <div className='bg-info border rounded-2 mt-5  left-nav'>
+        <div className='bg-info border rounded-2  left-nav'>
             <h4>Total Course: {course.length}</h4>
-            <ListGroup>
+            <ListGroup className=''>
             {
-                course.map( cs => <ListGroup.Item className='' variant="primary">
+                course.map( cs => <ListGroup.Item variant="primary">
                     <Link className='course-list' to={`/course/${cs._id}`}><li>{cs.title}</li></Link>
                 </ListGroup.Item>)
             }

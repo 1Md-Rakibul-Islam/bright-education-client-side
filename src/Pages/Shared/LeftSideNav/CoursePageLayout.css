@@ -5,3 +5,10 @@
 .course-list {
     text-decoration: none;
 }
+
+@media only screen and ( max-width: 980px) {
+    .left-nav {
+        position: relative;
+        margin-bottom: 20px;
+    }
+}

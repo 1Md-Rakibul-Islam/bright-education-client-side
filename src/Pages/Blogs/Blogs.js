@@ -34,12 +34,8 @@ Dynamic linksbr <br />
 With dynamic links, firebase ensures a customized user experience for your application across all the platforms. You can use dynamic links to drive the native app conversions. The user opening the dynamic link will be prompted to install the app in case the application is not already installed. By this, many people can install your application easily.
 
 Cloud Messaging <br />
-The firebase cloud messaging (FCM) allows you in delivering the push messages to indicate something of interest to the users of your app. You can send a message through two easy ways. First, you can write code on the backend to ping your app every time something gets updated, for example, direct users notifications. Another option is, you can compose a message with the help of firebase console to ping users with information of interest. This is direct user notification which is commonly used.
+The firebase cloud messaging (FCM) allows you in delivering the push messages to indicate something of interest to the users of your app. You can send a message through two easy ways. First, you can write code on the backend to ping your app every time something gets updated, for example, direct users notifications.
 
-It is always better to send a message to members of analytics audience. This helps you in targeting users with information which interest them instead of blasting irrelevant messages to everyone.
-
-Automatic Scaling <br />
-Firebase is built for performance and scalability. As and when there is a change in data, Firebase helps in the calculation of the minimum set of updates needed to keep all your clients synchronized. Additionally, the API functions of firebase are designed in order to scale linearly with the size of data being synchronized. It handles the scaling operations. Your application will scale from its first user to its first million user without any change in the code.
                                 </li>
                             </ul>
                         </li>

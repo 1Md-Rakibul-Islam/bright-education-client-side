@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import './Register.css'
 
+// npm install -g firebase-tools
 
 const Register = () => {
     return (
